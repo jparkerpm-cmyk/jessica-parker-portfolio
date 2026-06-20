@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recovering a Failed Product Launch — Jessica Parker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #1a1a1a; --ink-light: #5a5a5a; --paper: #f8f6f1; --rule: #d8d4cc; --accent: #c25a2a; --accent-light: #e8d4c8; --white: #ffffff; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { padding: 24px 48px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+  .nav-home { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-home:hover { color: var(--accent); }
+  .nav-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); letter-spacing: 0.06em; }
+  .case-header { max-width: 860px; margin: 0 auto; padding: 80px 48px 64px; border-bottom: 1px solid var(--rule); }
+  .case-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .case-context-line { font-size: 15px; color: var(--ink-light); margin-bottom: 40px; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+  .tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--rule); color: var(--ink-light); }
+  .case-results-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .result-item { background: var(--paper); padding: 28px 24px; }
+  .result-number { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 6px; letter-spacing: -0.02em; }
+  .result-label { font-size: 12px; color: var(--ink-light); line-height: 1.4; }
+  .case-body { max-width: 860px; margin: 0 auto; padding: 80px 48px; }
+  .case-section { margin-bottom: 64px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  h2 { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 20px; }
+  p { font-size: 16px; line-height: 1.75; color: var(--ink-light); }
+  p + p { margin-top: 16px; }
+  p strong { color: var(--ink); font-weight: 500; }
+  .action-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .action-item { display: grid; grid-template-columns: 32px 1fr; gap: 16px; align-items: start; }
+  .action-marker { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); padding-top: 3px; }
+  .action-text { font-size: 15px; line-height: 1.65; color: var(--ink-light); }
+  .action-text strong { color: var(--ink); font-weight: 500; }
+  .pullquote { margin: 48px 0; padding: 32px 36px; border-left: 3px solid var(--accent); background: var(--white); }
+  .pullquote p { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; line-height: 1.4; color: var(--ink); font-style: italic; }
+  .nav-footer { border-top: 1px solid var(--rule); padding: 48px; max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  .nav-footer a { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-footer a:hover { color: var(--accent); }
+  .nav-next { text-align: right; }
+  .nav-next-label { font-size: 11px; color: var(--ink-light); display: block; margin-bottom: 6px; }
+  @media (max-width: 768px) { nav, .case-header, .case-body, .nav-footer { padding-left: 24px; padding-right: 24px; } .case-results-bar { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-home">← Jessica Parker</a>
+  <span class="nav-label">Case Study 02 / 04</span>
+</nav>
+
+<div class="case-header">
+  <p class="case-eyebrow">Case Study 02</p>
+  <h1>Recovering a Failed Product Launch</h1>
+  <p class="case-context-line">Telehealth / Pharmacy Platform · Prior Authorization Application</p>
+  <div class="case-tags">
+    <span class="tag">Product Recovery</span>
+    <span class="tag">Workflow Mapping</span>
+    <span class="tag">Prior Authorization</span>
+    <span class="tag">Telehealth</span>
+  </div>
+  <div class="case-results-bar">
+    <div class="result-item">
+      <div class="result-number">↑</div>
+      <div class="result-label">PA processing time matched then exceeded legacy manual system</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">0</div>
+      <div class="result-label">Duplicate provider outreach incidents after fix</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">✓</div>
+      <div class="result-label">System moved from "we want the old way back" to actively relied upon</div>
+    </div>
+  </div>
+</div>
+
+<div class="case-body">
+
+  <div class="case-section">
+    <p class="section-label">Situation</p>
+    <p>I joined a telehealth and pharmacy platform during a corporate acquisition and was handed ownership of a prior authorization application. The app had been built to replace a manual PA process and was scheduled to go live within weeks of my start date.</p>
+    <p>It launched. It flopped. The old manual process was faster, easier to follow a PA through to a provider, and easier to track follow-ups. The new system was visually polished but functionally unusable. Customer service reps, pharmacists, managers, and providers were all struggling. Providers were getting duplicate outreach because the system could not track who had already been contacted.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">Diagnosis</p>
+    <p>The product had been built from a spec, not from an understanding of how people actually worked. Nobody had mapped the real workflows of the people using it.</p>
+
+    <div class="pullquote">
+      <p>The system looked right on screen but broke down in practice because it did not match how PAs actually move through an organization.</p>
+    </div>
+
+    <p>PAs move across multiple roles with different information needs at each stage. Follow-up cycles require clear visibility into what has been done and what has not. The system had none of that. It had been built from assumptions about the process, not from the process itself.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">What I Did</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">01</span>
+        <span class="action-text"><strong>Identified every user type in the PA process:</strong> customer service reps, pharmacists, managers, providers. Each had different information needs at different points in the workflow.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">02</span>
+        <span class="action-text"><strong>Mapped their current workflows using the old manual system.</strong> Not what they were supposed to do. What they actually did.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">03</span>
+        <span class="action-text"><strong>Conducted time studies</strong> to understand where the real bottlenecks were in both the old and new systems.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">04</span>
+        <span class="action-text"><strong>Walked through the new system step by step against those workflows</strong> to identify exactly where it broke down for each role.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">05</span>
+        <span class="action-text"><strong>Fixed the critical bottlenecks first</strong> to match the speed of the legacy system. That restored trust before any additional improvements were made.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">06</span>
+        <span class="action-text"><strong>Planned and delivered iterative improvements</strong> that made the system better than what they had before, not just equivalent to it.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">Results</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">PA processing time matched and then exceeded the legacy manual system</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Eliminated duplicate provider outreach</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Clear visibility into PA status across all roles</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">System moved from "we want the old way back" to actively relied upon</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Continued iterative improvements added value beyond the original system scope</span>
+      </div>
+    </div>
+    <p style="margin-top: 32px;">The product had been built from assumptions, not from the actual problem. The fix started with understanding how people really worked, then rebuilding to match and improve on that reality.</p>
+  </div>
+
+</div>
+
+<div class="nav-footer">
+  <a href="agile.html">← Rebuilding a Broken Agile Process</a>
+  <div class="nav-next">
+    <span class="nav-next-label">Next</span>
+    <a href="pharmavigilance.html">Pharmacovigilance Platform →</a>
+  </div>
+</div>
+
+</body>
+</html>
