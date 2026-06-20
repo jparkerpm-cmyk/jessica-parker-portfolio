@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protecting Delivery from Organizational Chaos — Jessica Parker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #1a1a1a; --ink-light: #5a5a5a; --paper: #f8f6f1; --rule: #d8d4cc; --accent: #c25a2a; --accent-light: #e8d4c8; --white: #ffffff; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { padding: 24px 48px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+  .nav-home { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-home:hover { color: var(--accent); }
+  .nav-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); letter-spacing: 0.06em; }
+  .case-header { max-width: 860px; margin: 0 auto; padding: 80px 48px 64px; border-bottom: 1px solid var(--rule); }
+  .case-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .case-context-line { font-size: 15px; color: var(--ink-light); margin-bottom: 40px; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+  .tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--rule); color: var(--ink-light); }
+  .case-results-bar { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .result-item { background: var(--paper); padding: 28px 24px; }
+  .result-number { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 6px; letter-spacing: -0.02em; }
+  .result-label { font-size: 12px; color: var(--ink-light); line-height: 1.4; }
+  .case-body { max-width: 860px; margin: 0 auto; padding: 80px 48px; }
+  .case-section { margin-bottom: 64px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  p { font-size: 16px; line-height: 1.75; color: var(--ink-light); }
+  p + p { margin-top: 16px; }
+  p strong { color: var(--ink); font-weight: 500; }
+  .action-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .action-item { display: grid; grid-template-columns: 32px 1fr; gap: 16px; align-items: start; }
+  .action-marker { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); padding-top: 3px; }
+  .action-text { font-size: 15px; line-height: 1.65; color: var(--ink-light); }
+  .action-text strong { color: var(--ink); font-weight: 500; }
+  .pullquote { margin: 48px 0; padding: 32px 36px; border-left: 3px solid var(--accent); background: var(--white); }
+  .pullquote p { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; line-height: 1.4; color: var(--ink); font-style: italic; }
+  .tradeoff-box { background: var(--white); border: 1px solid var(--rule); padding: 32px; margin: 32px 0; }
+  .tradeoff-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+  .tradeoff-text { font-size: 15px; line-height: 1.7; color: var(--ink); font-style: italic; }
+  .nav-footer { border-top: 1px solid var(--rule); padding: 48px; max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  .nav-footer a { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-footer a:hover { color: var(--accent); }
+  .nav-next { text-align: right; }
+  .nav-next-label { font-size: 11px; color: var(--ink-light); display: block; margin-bottom: 6px; }
+  @media (max-width: 768px) { nav, .case-header, .case-body, .nav-footer { padding-left: 24px; padding-right: 24px; } .case-results-bar { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-home">← Jessica Parker</a>
+  <span class="nav-label">Case Study 04 / 04</span>
+</nav>
+
+<div class="case-header">
+  <p class="case-eyebrow">Case Study 04</p>
+  <h1>Protecting Delivery from Organizational Chaos</h1>
+  <p class="case-context-line">Telehealth / Pharmacy Platform · Post-Acquisition Environment</p>
+  <div class="case-tags">
+    <span class="tag">Roadmap Management</span>
+    <span class="tag">Stakeholder Alignment</span>
+    <span class="tag">Delivery</span>
+    <span class="tag">Trade-off Framework</span>
+  </div>
+  <div class="case-results-bar">
+    <div class="result-item">
+      <div class="result-number">1–2</div>
+      <div class="result-label">Epic-sized scope changes absorbed per month without a missed delivery</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">100%</div>
+      <div class="result-label">Negotiated scope delivered on time</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">↑</div>
+      <div class="result-label">Team morale outpaced peer teams in the same org</div>
+    </div>
+  </div>
+</div>
+
+<div class="case-body">
+
+  <div class="case-section">
+    <p class="section-label">Situation</p>
+    <p>The company was a smaller organization finding its footing inside a larger parent company. It worked with major pharmaceutical manufacturers, and when a manufacturer wanted something, leadership felt pressure to deliver it immediately. On a weekly to monthly basis, C-suite or upper management would arrive with a new initiative that needed to fit into the existing roadmap. The team was constantly being asked to absorb new work without anything being removed.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">Diagnosis</p>
+    <p>The problem was not the incoming requests. Those were legitimate business needs. The problem was that no one had a framework for evaluating trade-offs. Every new initiative was treated as additive.</p>
+
+    <div class="pullquote">
+      <p>Without a visible, agreed-upon picture of what the team was already carrying, leadership could not make informed decisions. They were managing by urgency, not by strategy.</p>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">What I Did</p>
+    <p>For every incoming request, the framework ran the same way every time.</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">01</span>
+        <span class="action-text"><strong>Assessed the request first.</strong> Did I have enough information to t-shirt size it, or did I need to gather that before anything else?</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">02</span>
+        <span class="action-text"><strong>Brought every request to the team before making any commitment.</strong> No commitments without the team's input on feasibility and impact.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">03</span>
+        <span class="action-text"><strong>Evaluated the request against current work in progress.</strong> Named the conflict explicitly.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">04</span>
+        <span class="action-text"><strong>Presented leadership with clear trade-offs.</strong> Not a problem. A decision with options.</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">05</span>
+        <span class="action-text"><strong>Negotiated scope and timing until we had an agreement the team could deliver on.</strong> Then held that agreement.</span>
+      </div>
+    </div>
+
+    <div class="tradeoff-box">
+      <p class="tradeoff-label">How a trade-off conversation sounded</p>
+      <p class="tradeoff-text">"You want this medium-sized initiative. We are doing this large initiative. I can do one or the other. Or I can start the medium and pause the large. Or I can do an MVP of each if we agree on what MVP means. Here is what I think it means."</p>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">Results</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">The team absorbed 1 to 2 epic-sized scope changes per month without missing a delivery commitment</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Every negotiated scope shipped on time. When original scope was reduced to fit a new initiative, that reduction was explicit, agreed upon, and the new scope delivered in full</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Team morale improved measurably and outpaced peer teams in the same organization not using the framework</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Leadership stopped managing by urgency. Trade-off conversations replaced scope-piling</span>
+      </div>
+    </div>
+    <p style="margin-top: 32px;">The frustration with constant change did not disappear. What disappeared was the feeling of being ambushed. The team knew they would never be asked to take on what they could not handle. That was the shift.</p>
+    <p>This only worked because leadership was willing to engage with the trade-offs instead of overriding them. My part was making sure the trade-off was always on the table. Leaders make different decisions when the cost of change is in front of them.</p>
+  </div>
+
+</div>
+
+<div class="nav-footer">
+  <a href="pharmavigilance.html">← Pharmacovigilance Platform</a>
+  <div class="nav-next">
+    <span class="nav-next-label">Back to start</span>
+    <a href="../index.html">All Case Studies →</a>
+  </div>
+</div>
+
+</body>
+</html>
