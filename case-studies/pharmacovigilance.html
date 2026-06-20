@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pharmacovigilance Platform — Jessica Parker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root { --ink: #1a1a1a; --ink-light: #5a5a5a; --paper: #f8f6f1; --rule: #d8d4cc; --accent: #c25a2a; --accent-light: #e8d4c8; --white: #ffffff; }
+  html { font-size: 16px; scroll-behavior: smooth; }
+  body { background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-weight: 300; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  nav { padding: 24px 48px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; align-items: center; }
+  .nav-home { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-home:hover { color: var(--accent); }
+  .nav-label { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--ink-light); letter-spacing: 0.06em; }
+  .case-header { max-width: 860px; margin: 0 auto; padding: 80px 48px 64px; border-bottom: 1px solid var(--rule); }
+  .case-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; }
+  h1 { font-family: 'DM Serif Display', serif; font-size: clamp(36px, 5vw, 60px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .case-context-line { font-size: 15px; color: var(--ink-light); margin-bottom: 40px; }
+  .case-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 48px; }
+  .tag { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border: 1px solid var(--rule); color: var(--ink-light); }
+  .case-results-bar { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--rule); border: 1px solid var(--rule); }
+  .result-item { background: var(--paper); padding: 28px 24px; }
+  .result-number { font-family: 'DM Serif Display', serif; font-size: 36px; color: var(--accent); line-height: 1; margin-bottom: 6px; letter-spacing: -0.02em; }
+  .result-label { font-size: 12px; color: var(--ink-light); line-height: 1.4; }
+  .case-body { max-width: 860px; margin: 0 auto; padding: 80px 48px; }
+  .case-section { margin-bottom: 64px; }
+  .section-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+  p { font-size: 16px; line-height: 1.75; color: var(--ink-light); }
+  p + p { margin-top: 16px; }
+  p strong { color: var(--ink); font-weight: 500; }
+  .action-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+  .action-item { display: grid; grid-template-columns: 32px 1fr; gap: 16px; align-items: start; }
+  .action-marker { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); padding-top: 3px; }
+  .action-text { font-size: 15px; line-height: 1.65; color: var(--ink-light); }
+  .action-text strong { color: var(--ink); font-weight: 500; }
+  .pullquote { margin: 48px 0; padding: 32px 36px; border-left: 3px solid var(--accent); background: var(--white); }
+  .pullquote p { font-family: 'DM Serif Display', serif; font-size: 22px; font-weight: 400; line-height: 1.4; color: var(--ink); font-style: italic; }
+  .nav-footer { border-top: 1px solid var(--rule); padding: 48px; max-width: 860px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+  .nav-footer a { font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); text-decoration: none; }
+  .nav-footer a:hover { color: var(--accent); }
+  .nav-next { text-align: right; }
+  .nav-next-label { font-size: 11px; color: var(--ink-light); display: block; margin-bottom: 6px; }
+  @media (max-width: 768px) { nav, .case-header, .case-body, .nav-footer { padding-left: 24px; padding-right: 24px; } .case-results-bar { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-home">← Jessica Parker</a>
+  <span class="nav-label">Case Study 03 / 04</span>
+</nav>
+
+<div class="case-header">
+  <p class="case-eyebrow">Case Study 03</p>
+  <h1>Pharmacovigilance Platform: From Excel to Audit-Ready</h1>
+  <p class="case-context-line">Specialty Pharmacy Services · Adverse Event Reporting System</p>
+  <div class="case-tags">
+    <span class="tag">HIPAA Compliance</span>
+    <span class="tag">0-to-1 Build</span>
+    <span class="tag">Process Design</span>
+    <span class="tag">FDA Reporting</span>
+  </div>
+  <div class="case-results-bar">
+    <div class="result-item">
+      <div class="result-number">0</div>
+      <div class="result-label">HIPAA incidents per month, down from 5</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">50%</div>
+      <div class="result-label">Reduction in processing time</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">5→2</div>
+      <div class="result-label">Reviewers in routing chain</div>
+    </div>
+    <div class="result-item">
+      <div class="result-number">✓</div>
+      <div class="result-label">24-hour SLA system-guaranteed</div>
+    </div>
+  </div>
+</div>
+
+<div class="case-body">
+
+  <div class="case-section">
+    <p class="section-label">Situation</p>
+    <p>A specialty pharmacy services company sold medication management services to pharmaceutical manufacturers. One of those services was adverse event and product quality complaint reporting. When a patient called about a problem with their medication, a customer service rep needed to log it, route it to the right people, and get it to the manufacturer within 24 hours. That is a regulatory requirement. Missing it is not a paperwork problem. It is a compliance problem.</p>
+    <p>They were tracking everything in Excel. Five people touched every report before it got out the door. Five HIPAA incidents per month on average. No consistent reporting structure. The 24-hour SLA was a manual chase. PHI routed to the wrong recipients is not only a compliance failure. It is a patient safety risk.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">What We Built</p>
+    <p>A single internal tool built within the company's existing CRM platform for customer service reps to log adverse events and product quality complaints in real time, on the call. One form per manufacturer, with dynamic fields that updated based on medication and medication type. Standardized inputs eliminated the variability that had been creating compliance exposure.</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text"><strong>AE/PQC review queue</strong> for the compliance team to catch missing data before submission</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text"><strong>Automated routing</strong> to the correct manufacturer third party, coded per client so the wrong report never went to the wrong place</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text"><strong>Audit-ready database</strong> with reporting built for internal review, manufacturer reporting, and regulatory inspection</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">The Ask That Opened a Gap</p>
+    <p>Mid-project a stakeholder came to me asking for an automated email. A specific edge case: manufacturers who had not subscribed to the AE/PQC service. She still needed a way to track those patient reports internally without routing them to the third party.</p>
+    <p>I asked why.</p>
+
+    <div class="pullquote">
+      <p>The email was a workaround she had invented because the gap had no name. Naming it changed what we built.</p>
+    </div>
+
+    <p>What she needed was not an email. She needed a workflow path that did not exist yet. A whole category of manufacturer clients had no home in the system we were building. When a manufacturer had not subscribed to the service, patient calls still came in. Those reports still had regulatory requirements attached. The product had no answer for them.</p>
+    <p>We added a separate workflow path for non-subscribing manufacturers. Their patient reports now had a compliant place to go. Nothing fell through.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">On Scope</p>
+    <p>The original ask was to solve the compliance problem. Every patient call with an adverse event or product quality complaint had a regulatory requirement attached to it. That was true whether the manufacturer had subscribed to the AE/PQC service or not. The non-subscribing path was not a new problem. It was part of the same problem that had not been named yet.</p>
+    <p>The stakeholder did not walk in asking for a new workflow. She walked in asking for an email because that was the solution she could see from where she was sitting. The discovery work is what surfaced what she actually needed.</p>
+    <p>Discovery does not stop when the build starts. What comes in mid-project gets evaluated the same way anything else does: does this belong in what we are building now, does it belong in a future iteration, or is it something else entirely. The PRD captures what you know at the start. Discovery is how you find what you did not know to ask.</p>
+  </div>
+
+  <div class="case-section">
+    <p class="section-label">Results</p>
+    <p>Adoption was immediate.</p>
+    <div class="action-list">
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Processing time dropped 50%</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">24-hour SLA went from a manual chase to a system guarantee</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">HIPAA incidents dropped from 5 per month to zero</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Five people in the routing chain became two</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Audits stopped being a scramble</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">Non-subscribing manufacturer reports had a compliant path for the first time</span>
+      </div>
+      <div class="action-item">
+        <span class="action-marker">—</span>
+        <span class="action-text">No client issues after release</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="nav-footer">
+  <a href="launch.html">← Recovering a Failed Product Launch</a>
+  <div class="nav-next">
+    <span class="nav-next-label">Next</span>
+    <a href="chaos.html">Protecting Delivery from Organizational Chaos →</a>
+  </div>
+</div>
+
+</body>
+</html>
