@@ -370,11 +370,87 @@
     letter-spacing: 0.06em;
   }
 
+  /* FIELD NOTES */
+  .field-notes {
+    padding-top: 64px;
+    border-top: 1px solid var(--rule);
+    margin-bottom: 96px;
+  }
+
+  .field-note {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 64px;
+    padding: 48px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .field-note-meta {
+    padding-top: 4px;
+  }
+
+  .field-note-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+    color: var(--ink);
+  }
+
+  .field-note-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+  }
+
+  .field-note-body p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-light);
+  }
+
+  .field-note-body p + p { margin-top: 14px; }
+
+  .field-note-body p strong { color: var(--ink); font-weight: 500; }
+
+  .field-note-sources {
+    margin-top: 28px;
+    padding-top: 20px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .field-note-sources-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 10px;
+  }
+
+  .field-note-sources ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .field-note-sources li {
+    font-size: 12px;
+    color: var(--ink-light);
+    line-height: 1.5;
+  }
+
   @media (max-width: 768px) {
     header, main { padding: 48px 24px; }
     .cases { grid-template-columns: 1fr; }
     .background { grid-template-columns: 1fr; gap: 48px; }
     .metrics { grid-template-columns: 1fr 1fr; }
+    .field-note { grid-template-columns: 1fr; gap: 24px; }
     .contact { flex-direction: column; align-items: flex-start; }
     .contact-links { align-items: flex-start; }
     footer { padding: 24px; flex-direction: column; gap: 12px; }
@@ -528,6 +604,27 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="field-notes">
+    <p class="section-label">Field Notes</p>
+
+    <div class="cases">
+
+      <a href="notes/shadow-ai.html" class="case-card">
+        <span class="case-number">June 2026</span>
+        <h2 class="case-title">Shadow AI</h2>
+        <p class="case-summary">72% of US clinicians turn to personal AI tools when the workplace option does not meet their needs. Most leadership reads this as a governance failure. It is a workflow failure. The AI did not fail. The workflow it was built into failed, and the AI inherited it.</p>
+        <div class="case-tags">
+          <span class="tag">Clinical AI</span>
+          <span class="tag">Workflow Design</span>
+          <span class="tag">Adoption</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+
+    </div>
+
   </div>
 
   <div class="contact">
