@@ -1,6 +1,7 @@
 # Jessica Parker — Product Management Portfolio
 
-Healthcare product management. 16 years. Former RN, former developer.
+Active RN. Former developer. 16 years in healthcare product management.
+
 
 ## Case Studies
 
@@ -15,4 +16,4 @@ Plain HTML and CSS. No framework. No build process. Google Fonts for typography.
 
 ## Contact
 
-jparker.pm@gmail.com
+jessie48011@gmail.com
