@@ -1,0 +1,354 @@
+/* ================================================
+   Jessica Parker Portfolio — Shared Stylesheet
+   Styled to match jparkerpm.com
+   ================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --ink: hsl(20, 28%, 13%);
+  --ink-light: hsl(25, 18%, 38%);
+  --paper: hsl(36, 55%, 96%);
+  --card: hsl(38, 50%, 94%);
+  --rule: hsl(30, 28%, 80%);
+  --accent: hsl(16, 88%, 52%);
+  --accent-light: hsl(34, 42%, 91%);
+  --white: hsl(38, 60%, 98%);
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(80% 60% at 15% 0%, rgba(240, 82, 25, 0.08), transparent 60%),
+    radial-gradient(70% 50% at 100% 30%, rgba(235, 208, 173, 0.35), transparent 65%),
+    radial-gradient(60% 40% at 50% 100%, rgba(201, 171, 156, 0.18), transparent 70%);
+  background-attachment: fixed;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- NAVIGATION ---- */
+nav {
+  padding: 24px 48px;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-home {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.15s ease;
+}
+
+.nav-home:hover { color: var(--accent); }
+
+.nav-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--ink-light);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* ---- CASE STUDY PAGES ---- */
+.case-header {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 48px 64px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.case-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.case-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.case-context-line {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink-light);
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.case-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 48px;
+}
+
+.tag {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid var(--rule);
+  color: var(--ink-light);
+  padding: 4px 10px;
+  border-radius: 2px;
+  font-weight: 500;
+  background: transparent;
+}
+
+.case-results-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2px;
+  background: var(--rule);
+  border: 1px solid var(--rule);
+}
+
+.result-item { background: var(--card); padding: 24px 28px; }
+
+.result-number {
+  font-family: var(--font-heading);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+
+.result-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--ink-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.case-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 80px 48px;
+}
+
+.case-section { margin-bottom: 64px; }
+
+.section-label {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--rule);
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+  color: var(--ink);
+}
+
+p { font-size: 16px; line-height: 1.75; color: var(--ink-light); font-family: var(--font-body); }
+p + p { margin-top: 16px; }
+p strong { color: var(--ink); font-weight: 600; }
+
+.action-list { margin-top: 24px; display: flex; flex-direction: column; gap: 16px; }
+
+.action-item { display: grid; grid-template-columns: 32px 1fr; gap: 16px; align-items: start; }
+
+.action-marker {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  padding-top: 3px;
+}
+
+.action-text { font-size: 15px; line-height: 1.7; color: var(--ink-light); font-family: var(--font-body); }
+
+.tradeoff-box {
+  background: var(--card);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  padding: 28px 32px;
+  margin-top: 24px;
+  border-radius: 2px;
+}
+
+.tradeoff-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.tradeoff-text { font-size: 15px; line-height: 1.7; color: var(--ink-light); font-family: var(--font-body); }
+
+.pullquote {
+  border-left: 3px solid var(--accent);
+  padding: 24px 32px;
+  margin: 32px 0;
+  background: var(--card);
+  border-radius: 2px;
+}
+
+.pullquote p {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--ink);
+  font-style: italic;
+}
+
+/* ---- NOTES PAGES ---- */
+.note-header {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 48px 64px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.note-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.note-header h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+
+.note-date {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  font-weight: 500;
+}
+
+.note-body { max-width: 720px; margin: 0 auto; padding: 64px 48px 80px; }
+.note-body p { font-size: 17px; line-height: 1.8; color: var(--ink-light); }
+.note-body p + p { margin-top: 20px; }
+.note-body p strong { color: var(--ink); font-weight: 600; }
+
+.note-sources { margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--rule); }
+
+.sources-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.note-sources ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+
+.note-sources li {
+  font-size: 13px;
+  color: var(--ink-light);
+  line-height: 1.6;
+  padding-left: 16px;
+  border-left: 2px solid var(--accent);
+  font-family: var(--font-body);
+}
+
+/* ---- FOOTER NAV (case + note pages) ---- */
+.nav-footer {
+  border-top: 1px solid var(--rule);
+  padding: 48px;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.nav-footer a {
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
+
+.nav-footer a:hover { color: var(--accent); }
+.nav-next { text-align: right; }
+
+.nav-next-label {
+  font-size: 10px;
+  color: var(--ink-light);
+  display: block;
+  margin-bottom: 6px;
+  font-family: var(--font-body);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  nav,
+  .case-header,
+  .case-body,
+  .note-header,
+  .note-body,
+  .nav-footer { padding-left: 24px; padding-right: 24px; }
+  .case-results-bar { grid-template-columns: 1fr 1fr; }
+  .case-header h1 { font-size: clamp(28px, 7vw, 40px); }
+}
