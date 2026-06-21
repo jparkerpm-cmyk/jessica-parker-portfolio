@@ -3,34 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jessica Parker — Product Manager, Healthcare Technology</title>
+<title>Jessica Parker â Product Manager, Healthcare Technology</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --ink: #1a1a1a;
-    --ink-light: #5a5a5a;
-    --paper: #f8f6f1;
-    --rule: #d8d4cc;
-    --accent: #c25a2a;
-    --accent-light: #e8d4c8;
-    --white: #ffffff;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --ink: hsl(20, 28%, 13%);
+    --ink-light: hsl(25, 18%, 38%);
+    --paper: hsl(36, 55%, 96%);
+    --card: hsl(38, 50%, 94%);
+    --rule: hsl(30, 28%, 80%);
+    --accent: hsl(16, 88%, 52%);
+    --accent-light: hsl(34, 42%, 91%);
+    --white: hsl(38, 60%, 98%);
   }
 
   html { font-size: 16px; scroll-behavior: smooth; }
 
   body {
-    background: var(--paper);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(80% 60% at 15% 0%, rgba(240, 82, 25, 0.08), transparent 60%),
+      radial-gradient(70% 50% at 100% 30%, rgba(235, 208, 173, 0.35), transparent 65%),
+      radial-gradient(60% 40% at 50% 100%, rgba(201, 171, 156, 0.18), transparent 70%);
+    background-attachment: fixed;
     color: var(--ink);
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 300;
+    font-family: var(--font-body);
+    font-weight: 400;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
 
-  /* HEADER */
   header {
     padding: 80px 48px 72px;
     max-width: 1100px;
@@ -38,82 +46,99 @@
     border-bottom: 1px solid var(--rule);
   }
 
+  header::before {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--accent);
+    margin-bottom: 1.75rem;
+  }
+
   .header-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--accent);
+    color: var(--ink);
+    opacity: 0.6;
     margin-bottom: 28px;
+    font-weight: 500;
   }
 
   h1 {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-heading);
     font-size: clamp(42px, 6vw, 72px);
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.05;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
+    color: var(--ink);
     margin-bottom: 32px;
   }
 
   h1 em {
     font-style: italic;
     color: var(--accent);
+    font-weight: 700;
   }
 
   .header-body {
-    max-width: 620px;
-    font-size: 17px;
+    max-width: 640px;
+    margin-bottom: 48px;
+  }
+
+  .header-body p {
+    font-size: 16px;
     line-height: 1.7;
     color: var(--ink-light);
+    margin-bottom: 16px;
+    font-family: var(--font-body);
+    font-weight: 400;
   }
-
-  .header-body p + p { margin-top: 14px; }
 
   .header-meta {
-    margin-top: 48px;
     display: flex;
     gap: 48px;
-    flex-wrap: wrap;
-  }
-
-  .meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
   }
 
   .meta-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink-light);
-  }
-
-  .meta-value {
-    font-size: 15px;
-    font-weight: 400;
-    color: var(--ink);
-  }
-
-  /* MAIN */
-  main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 80px 48px;
-  }
-
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--ink-light);
-    margin-bottom: 40px;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
   }
 
-  /* CASE STUDY GRID */
+  .meta-value {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+  }
+
+  main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px 96px;
+  }
+
+  .section-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 600;
+    padding-top: 64px;
+    margin-bottom: 32px;
+  }
+
   .cases {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -124,32 +149,37 @@
   }
 
   .case-card {
-    background: var(--paper);
+    background: var(--card);
     padding: 48px 44px;
     text-decoration: none;
     color: inherit;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transition: background 0.15s ease;
+    transition: background 0.15s ease, box-shadow 0.15s ease;
     position: relative;
   }
 
-  .case-card:hover { background: var(--white); }
+  .case-card:hover {
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(240, 82, 25, 0.06);
+  }
 
   .case-number {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 11px;
     color: var(--accent);
     letter-spacing: 0.1em;
+    font-weight: 600;
   }
 
   .case-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-heading);
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.01em;
+    color: var(--ink);
   }
 
   .case-context {
@@ -157,6 +187,7 @@
     color: var(--ink-light);
     font-weight: 400;
     letter-spacing: 0.02em;
+    font-family: var(--font-body);
   }
 
   .case-summary {
@@ -164,23 +195,27 @@
     line-height: 1.65;
     color: var(--ink-light);
     flex: 1;
+    font-family: var(--font-body);
   }
 
   .case-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    margin-top: 8px;
+    margin-top: auto;
   }
 
   .tag {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 10px;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 4px 10px;
     border: 1px solid var(--rule);
     color: var(--ink-light);
+    padding: 4px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    background: transparent;
   }
 
   .case-arrow {
@@ -190,87 +225,11 @@
     font-size: 18px;
     color: var(--accent);
     opacity: 0;
-    transition: opacity 0.15s ease, transform 0.15s ease;
+    transition: opacity 0.15s ease;
   }
 
-  .case-card:hover .case-arrow {
-    opacity: 1;
-    transform: translateX(4px);
-  }
+  .case-card:hover .case-arrow { opacity: 1; }
 
-  /* BACKGROUND */
-  .background {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    padding-top: 64px;
-    border-top: 1px solid var(--rule);
-    margin-bottom: 96px;
-  }
-
-  .background-left h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px;
-    font-weight: 400;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    letter-spacing: -0.01em;
-  }
-
-  .background-left p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--ink-light);
-  }
-
-  .background-left p + p { margin-top: 14px; }
-
-  .background-right {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    padding-top: 8px;
-  }
-
-  .credential {
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 16px;
-    align-items: start;
-  }
-
-  .credential-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--accent-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .credential-icon span {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    font-weight: 500;
-    color: var(--accent);
-    letter-spacing: 0.05em;
-  }
-
-  .credential-text strong {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 4px;
-  }
-
-  .credential-text span {
-    font-size: 13px;
-    color: var(--ink-light);
-    line-height: 1.5;
-  }
-
-  /* METRICS */
   .metrics {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -281,98 +240,107 @@
   }
 
   .metric {
-    background: var(--paper);
+    background: var(--card);
     padding: 36px 32px;
   }
 
   .metric-number {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-heading);
     font-size: 44px;
-    font-weight: 400;
-    color: var(--accent);
+    font-weight: 700;
+    color: var(--ink);
     line-height: 1;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     letter-spacing: -0.02em;
   }
 
   .metric-label {
-    font-size: 13px;
-    color: var(--ink-light);
-    line-height: 1.4;
-  }
-
-  /* CONTACT */
-  .contact {
-    padding-top: 64px;
-    border-top: 1px solid var(--rule);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-wrap: wrap;
-    gap: 32px;
-  }
-
-  .contact h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 36px;
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-  }
-
-  .contact p {
-    font-size: 15px;
-    color: var(--ink-light);
-    max-width: 400px;
-    line-height: 1.65;
-  }
-
-  .contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: flex-end;
-  }
-
-  .contact-link {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    color: var(--ink);
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    border-bottom: 1px solid var(--rule);
-    padding-bottom: 2px;
-    transition: border-color 0.15s ease, color 0.15s ease;
-  }
-
-  .contact-link:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  /* FOOTER */
-  footer {
-    margin-top: 80px;
-    padding: 32px 48px;
-    border-top: 1px solid var(--rule);
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  footer span {
-    font-family: 'DM Mono', monospace;
     font-size: 11px;
     color: var(--ink-light);
-    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+    font-family: var(--font-body);
+    font-weight: 500;
   }
 
-  /* FIELD NOTES */
+  .background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+    padding: 64px 0;
+    border-top: 1px solid var(--rule);
+    margin-bottom: 96px;
+  }
+
+  .background-left h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(32px, 4vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    color: var(--ink);
+  }
+
+  .background-left p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-light);
+    margin-bottom: 16px;
+    font-family: var(--font-body);
+  }
+
+  .background-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 8px;
+  }
+
+  .credential {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .credential-icon {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--rule);
+    background: var(--card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+
+  .credential-icon span {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .credential-text strong {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: var(--font-body);
+    color: var(--ink);
+  }
+
+  .credential-text span {
+    font-size: 13px;
+    color: var(--ink-light);
+    line-height: 1.5;
+    font-family: var(--font-body);
+  }
+
   .field-notes {
-    padding-top: 64px;
     border-top: 1px solid var(--rule);
     margin-bottom: 96px;
   }
@@ -385,14 +353,12 @@
     border-bottom: 1px solid var(--rule);
   }
 
-  .field-note-meta {
-    padding-top: 4px;
-  }
+  .field-note-meta { padding-top: 4px; }
 
   .field-note-title {
-    font-family: 'DM Serif Display', serif;
+    font-family: var(--font-heading);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     line-height: 1.3;
     letter-spacing: -0.01em;
     margin-bottom: 12px;
@@ -400,22 +366,24 @@
   }
 
   .field-note-date {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-light);
+    font-weight: 500;
   }
 
   .field-note-body p {
     font-size: 15px;
     line-height: 1.75;
     color: var(--ink-light);
+    font-family: var(--font-body);
   }
 
   .field-note-body p + p { margin-top: 14px; }
 
-  .field-note-body p strong { color: var(--ink); font-weight: 500; }
+  .field-note-body p strong { color: var(--ink); font-weight: 600; }
 
   .field-note-sources {
     margin-top: 28px;
@@ -424,43 +392,118 @@
   }
 
   .field-note-sources-label {
-    font-family: 'DM Mono', monospace;
+    font-family: var(--font-body);
     font-size: 10px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--ink-light);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    font-weight: 500;
   }
 
-  .field-note-sources ul {
-    list-style: none;
+  .field-note-sources p {
+    font-size: 13px;
+    color: var(--ink-light);
+    line-height: 1.6;
+    font-family: var(--font-body);
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+  }
+
+  .contact {
+    border-top: 1px solid var(--rule);
+    padding: 64px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+  }
+
+  .contact h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+
+  .contact p {
+    font-size: 15px;
+    color: var(--ink-light);
+    line-height: 1.7;
+    font-family: var(--font-body);
+  }
+
+  .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  .field-note-sources li {
-    font-size: 12px;
-    color: var(--ink-light);
-    line-height: 1.5;
+  .contact-links a {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--ink);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: var(--rule);
+    transition: color 0.15s ease, text-decoration-color 0.15s ease;
+    font-weight: 400;
   }
+
+  .contact-links a:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+  }
+
+  footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 24px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-body);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  footer a {
+    color: var(--paper);
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity 0.15s ease;
+  }
+
+  footer a:hover { opacity: 1; }
 
   @media (max-width: 768px) {
-    header, main { padding: 48px 24px; }
+    header { padding: 48px 24px 48px; }
+    main { padding: 0 24px 64px; }
     .cases { grid-template-columns: 1fr; }
     .background { grid-template-columns: 1fr; gap: 48px; }
-    .metrics { grid-template-columns: 1fr 1fr; }
+    .metrics { grid-template-columns: repeat(2, 1fr); }
     .field-note { grid-template-columns: 1fr; gap: 24px; }
-    .contact { flex-direction: column; align-items: flex-start; }
+    .contact { grid-template-columns: 1fr; gap: 32px; }
     .contact-links { align-items: flex-start; }
-    footer { padding: 24px; flex-direction: column; gap: 12px; }
+    .header-meta { flex-wrap: wrap; gap: 24px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <p class="header-label">Jessica Parker — Portfolio</p>
+  <p class="header-label">Jessica Parker â Portfolio</p>
   <h1>Product management<br>in healthcare<br><em>that actually ships.</em></h1>
   <div class="header-body">
     <p>Former RN. Former developer. 16 years in healthcare product management. I see product problems through three lenses at once: clinical, technical, and product. That combination is rare.</p>
@@ -473,7 +516,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Background</span>
-      <span class="meta-value">RN · Developer · PM</span>
+      <span class="meta-value">RN Â· Developer Â· PM</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Domain</span>
@@ -481,7 +524,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Location</span>
-      <span class="meta-value">Connecticut · Remote</span>
+      <span class="meta-value">Connecticut Â· Remote</span>
     </div>
   </div>
 </header>
@@ -502,7 +545,7 @@
         <span class="tag">Team Health</span>
         <span class="tag">Process Design</span>
       </div>
-      <span class="case-arrow">→</span>
+      <span class="case-arrow">â</span>
     </a>
 
     <a href="cases/launch.html" class="case-card">
@@ -515,7 +558,7 @@
         <span class="tag">Workflow Mapping</span>
         <span class="tag">Prior Authorization</span>
       </div>
-      <span class="case-arrow">→</span>
+      <span class="case-arrow">â</span>
     </a>
 
     <a href="cases/pharmavigilance.html" class="case-card">
@@ -528,7 +571,7 @@
         <span class="tag">0-to-1 Build</span>
         <span class="tag">Process Design</span>
       </div>
-      <span class="case-arrow">→</span>
+      <span class="case-arrow">â</span>
     </a>
 
     <a href="cases/chaos.html" class="case-card">
@@ -541,7 +584,7 @@
         <span class="tag">Stakeholder Alignment</span>
         <span class="tag">Delivery</span>
       </div>
-      <span class="case-arrow">→</span>
+      <span class="case-arrow">â</span>
     </a>
 
   </div>
@@ -562,7 +605,7 @@
       <div class="metric-label">On-time delivery rate after agile rebuild</div>
     </div>
     <div class="metric">
-      <div class="metric-number">6h→1h</div>
+      <div class="metric-number">6hâ1h</div>
       <div class="metric-label">Planning session time after process redesign</div>
     </div>
   </div>
@@ -620,7 +663,7 @@
           <span class="tag">Workflow Design</span>
           <span class="tag">Adoption</span>
         </div>
-        <span class="case-arrow">→</span>
+        <span class="case-arrow">â</span>
       </a>
 
     </div>
@@ -642,8 +685,8 @@
 </main>
 
 <footer>
-  <span>Jessica Parker · Healthcare Product Management</span>
-  <span>Connecticut · Remote</span>
+  <span>Jessica Parker Â· Healthcare Product Management</span>
+  <span>Connecticut Â· Remote</span>
 </footer>
 
 </body>
