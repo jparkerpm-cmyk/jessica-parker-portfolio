@@ -1,0 +1,21 @@
+## What Most Teams Treat as a Checkbox, I Treated as an Opening
+
+I spent eight years at a surgical information systems company redesigning the parts of the EHR that hurt people when they fail. CPOE. eMAR. Medication reconciliation. When computerized order entry drops a dose or medication reconciliation misses an interaction, a patient is harmed and the surgery center cannot operate. There is no soft failure mode.
+
+The work was driven by certification. To pass Meaningful Use Stage 2, we either needed modules that did not exist yet or had to bring existing ones up to the regulatory bar. The stake was not a credential. Clients were required to use a certified product or take Medicare and Medicaid reimbursement penalties. If we missed certification, every client had a financial reason to leave for a vendor who had it. The deadline gated their revenue, which made it gate ours.
+
+Clearing the bar was the floor. Most teams treat certification as a box. Clear it, ship the minimum, move on. I treated the forced work as the opening to fix what clients were already living with.
+
+Our CPOE feature is the example. It passed clinically, but clients hated it. It had been built for the physician entering orders alone, at a time when physicians were openly resistant to using the technology at all. The nurses and other clinicians who could have helped move orders had no way in. So the one group most willing to use the system was locked out of it, and the one group least willing was the only group it served.
+
+I had the module open for certification anyway. So I fixed the real problem while I was in there. We built order groups and protocols for sets of orders, which let nurses and other clinical users organize and orchestrate the redundant order types. The physician still signed off. The decision and the legal responsibility stayed with the MD. What changed was that the people willing to do the orchestration could finally do it, and the physician stopped being the sole data-entry bottleneck for work that did not require their hands.
+
+That is a pattern in everything I built there. I also built clinical decision support using algorithmic workflows before the industry had a name for it. That tool did not decide anything for the clinician either. It read the case, surfaced the relevant options from what the case data showed, and made the chosen option easier to act on once the clinician picked it. The decision stayed with the person. The tool removed the friction around it.
+
+The line held both times. Keep the call with the clinician. Remove the work around the call. A tool that decides for a clinician gets overridden or ignored the first time it is wrong under pressure. A tool that lays out the real options and gets out of the way earns use. I built for the second one because I had been the clinician on the other end of tools that tried to be the first.
+
+I led that certification end to end. Product decisions, requirements, QA, client validation, certification testing. Delivered in six months with a small team and limited resources, which was fast to the point of being unreasonable.
+
+This is the work now being rebuilt with AI. Same problem, new engine. Get the right information to a clinician at the moment of decision, keep the human in the loop, and do not pretend the machine should make the call. I was designing for that constraint before it had a research literature. The constraint has not changed. Only the tooling has.
+
+Tags: **Clinical AI · human-in-the-loop design · EHR · regulatory certification · surgical**
