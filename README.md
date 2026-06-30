@@ -12,6 +12,10 @@ Active RN. Former developer. 16 years in healthcare product management.
 5. [After the Call, the Patient Went Blind](cases/call.html)
 6. [What Most Teams Treat as a Checkbox](cases/opening.html)
 
+## Field Notes
+1. [Shadow AI](notes/shadow-ai.html)
+2. [They Never Tell You the Problem](notes/problem.html)
+
 ## Stack
 
 Plain HTML and CSS. No framework. No build process. Google Fonts for typography.
