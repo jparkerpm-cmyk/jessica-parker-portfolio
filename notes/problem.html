@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>They Never Tell You the Problem — Jessica Parker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../style.css">
+
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-home"> Jessica Parker</a>
+  <span class="nav-label">Field Note</span>
+</nav>
+
+<div class="case-header">
+  <p class="case-eyebrow">Field Note</p>
+  <h1>They Never Tell You the Problem. They Tell You the Solution.</h1>
+  <p class="case-context-line">On reading what a stakeholder is actually asking for</p>
+</div>
+
+<div class="case-body">
+
+  <div class="case-section">
+    <p>A stakeholder almost never brings you a problem. They bring you a solution and call it a requirement.</p>
+    <p>They ask for a sortable column. A new field. A report. A button. Something specific and concrete that they can describe down to the detail. What they hand you is the answer they already arrived at, and the problem that produced it stays in their head, unexamined, because from where they sit the answer was obvious.</p>
+    <p>This is not a mid-build quirk. It is how stakeholders think. The first ask in discovery and the millionth ask three months into delivery arrive the same way. Pre-solved. The work that produced the solution happened privately, fast, and invisibly, and what reaches you is only the output of it. The requirement is a conclusion with the reasoning deleted.</p>
+    <p>So the job is to back it up. Every time. Take the solution they handed you and reverse it into the problem it was built to solve. Not because they are wrong to have a solution. Because the solution they can see from their seat is shaped by their seat, and the real problem is usually larger or sitting somewhere they cannot stand to look.</p>
+  </div>
+
+  <div class="case-section">
+    <p>A stakeholder recently asked me to make a column sortable. Narrow, concrete, easy to scope. Then the build surfaced friction. The way the database was structured made sorting that column cleanly against the rest of the record difficult. I went back to her to understand which workaround would actually serve her, and that conversation was where the real ask fell out.</p>
+    <p>She did not care about the column. She runs a department of reps who all call insurance companies. Their workflow moves task by task, which means a rep calls the same insurance company several times in a day, once per case, because nothing groups the cases by payer. The duplicate calls are pure waste. What she needed was a way to distribute and group work by insurance company so a rep could clear multiple cases in a single call. The sortable column was the smallest shape that need could take in her head. She had reverse-engineered a column out of a workflow problem, because the column was the part she could see.</p>
+
+    <div class="pullquote">
+      <p>The real requirement was work distribution by payer. The column was the conclusion. The duplicated phone calls were the reasoning she had skipped past.</p>
+    </div>
+  </div>
+
+  <div class="case-section">
+    <p>That is the move on every ask, not just the surprising ones. Someone requests a filter. Why. What are they failing to find without it. Someone requests a new status. Why. What decision can they not make because the current states do not show it. The request points at the problem the way a symptom points at a diagnosis. Real, useful, and not the thing itself.</p>
+    <p>This is the part of the work that does not fit in a PRD. The PRD captures the solutions everyone walked in with. It is a list of conclusions. The reasoning under each one, the actual problem, is what discovery is for, and discovery does not end when the document is signed. It runs as long as people keep handing you solutions, which is forever.</p>
+    <p>Build the column and you solved nothing. You would have spent engineering effort fighting the database to deliver a sort that was never the point, and her reps would still be dialing the same payer ten times a day. Find the problem under it and you build the thing that should have existed, which was never a column at all.</p>
+  </div>
+
+</div>
+
+<div class="nav-footer">
+  <a href="../index.html"> All Case Studies</a>
+  <div class="nav-next">
+    <span class="nav-next-label">More</span>
+    <a href="../index.html#field-notes">Field Notes </a>
+  </div>
+</div>
+
+</body>
+</html>
