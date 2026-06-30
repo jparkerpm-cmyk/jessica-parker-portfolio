@@ -9,6 +9,8 @@ Active RN. Former developer. 16 years in healthcare product management.
 2. [Recovering a Failed Product Launch](cases/launch.html)
 3. [Pharmacovigilance Platform: From Excel to Audit-Ready](cases/pharmacovigilance.html)
 4. [Protecting Delivery from Organizational Chaos](cases/chaos.html)
+5. [After the Call, the Patient Went Blind](cases/call.html)
+6. [What Most Teams Treat as a Checkbox](cases/opening.html)
 
 ## Stack
 
