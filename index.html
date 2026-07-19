@@ -3,45 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jessica Parker, Product Manager, Healthcare Technology</title>
+<title>Jessica Parker, Product Manager, Healthcare Technology</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,700&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
-  --font-mono: 'DM Mono', monospace;
-
-  --paper: #FDFBF8;
-  --card: #F7F3ED;
-  --white: #FFFFFF;
-
-  --ink: #3D3D3B;
-  --ink-light: #5A6B6D;
-  --primary: #14555C;
-
-  --rule: #E2DFD9;
-  --accent: #8B6914;
-  --accent-fill: #D9A34A;
-  --accent-light: #F5EBD8;
-  --accent-foreground: #3D2A08;
-}
-
-html h1, html h2, html h3, html h4, html h5, html h6 {
-  color: var(--primary);
-}
-
-
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+    --paper: #FDFBF8;
+    --card: #F7F3ED;
+    --white: #FFFFFF;
+    --ink: #3D3D3B;
+    --ink-light: #5A6B6D;
+    --primary: #14555C;
+    --rule: #E2DFD9;
+    --accent: #8B6914;
+    --accent-fill: #D9A34A;
+    --accent-light: #F5EBD8;
+    --accent-foreground: #3D2A08;
+  }
+  html h1, html h2, html h3, html h4, html h5, html h6 {
+    color: var(--primary);
+  }
   html { font-size: 16px; scroll-behavior: smooth; }
-
   body {
     background-color: var(--paper);
-background-image: 
-      radial-gradient(80% 60% at 15% 0%, rgba(20, 85, 92, 0.07), transparent 60%);
-      radial-gradient(70% 50% at 100% 30%, rgba(235, 208, 173, 0.35), transparent 65%),
-      radial-gradient(60% 40% at 50% 100%, rgba(201, 171, 156, 0.18), transparent 70%);
+    background-image:
+      radial-gradient(80% 60% at 15% 0%, rgba(20, 85, 92, 0.07), transparent 60%),
+      radial-gradient(70% 50% at 100% 30%, rgba(217, 163, 74, 0.16), transparent 65%),
+      radial-gradient(60% 40% at 50% 100%, rgba(20, 85, 92, 0.05), transparent 70%);
     background-attachment: fixed;
     color: var(--ink);
     font-family: var(--font-body);
@@ -49,55 +41,46 @@ background-image:
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
-
   header {
     padding: 80px 48px 72px;
     max-width: 1100px;
     margin: 0 auto;
     border-bottom: 1px solid var(--rule);
   }
-
   header::before {
     content: '';
     display: block;
     width: 3rem;
     height: 2px;
-    background: var(--accent);
+    background: var(--accent-fill);
     margin-bottom: 1.75rem;
   }
-
   .header-label {
     font-family: var(--font-body);
     font-size: 11px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--ink);
-    opacity: 0.6;
+    color: var(--accent);
     margin-bottom: 28px;
-    font-weight: 500;
+    font-weight: 600;
   }
-
   h1 {
     font-family: var(--font-heading);
     font-size: clamp(42px, 6vw, 72px);
     font-weight: 700;
     line-height: 1.05;
     letter-spacing: -0.01em;
-    color: var(--ink);
     margin-bottom: 32px;
   }
-
   h1 em {
     font-style: italic;
     color: var(--accent);
     font-weight: 700;
   }
-
   .header-body {
     max-width: 640px;
     margin-bottom: 48px;
   }
-
   .header-body p {
     font-size: 16px;
     line-height: 1.7;
@@ -106,14 +89,12 @@ background-image:
     font-family: var(--font-body);
     font-weight: 400;
   }
-
   .header-meta {
     display: flex;
     gap: 48px;
     padding-top: 32px;
     border-top: 1px solid var(--rule);
   }
-
   .meta-label {
     font-family: var(--font-body);
     font-size: 10px;
@@ -124,7 +105,6 @@ background-image:
     margin-bottom: 6px;
     font-weight: 500;
   }
-
   .meta-value {
     font-family: var(--font-body);
     font-size: 16px;
@@ -132,13 +112,11 @@ background-image:
     color: var(--ink);
     display: block;
   }
-
   main {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 48px 96px;
   }
-
   .section-label {
     font-family: var(--font-body);
     font-size: 11px;
@@ -149,7 +127,6 @@ background-image:
     padding-top: 64px;
     margin-bottom: 32px;
   }
-
   .cases {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,7 +135,6 @@ background-image:
     border: 1px solid var(--rule);
     margin-bottom: 96px;
   }
-
   .case-card {
     background: var(--card);
     padding: 48px 44px;
@@ -170,13 +146,10 @@ background-image:
     transition: background 0.15s ease, box-shadow 0.15s ease;
     position: relative;
   }
-
-.case-card:hover {
-  background: var(--white);
-  border-color: var(--primary);
-  box-shadow: 0 4px 24px rgba(20, 85, 92, 0.10);
+  .case-card:hover {
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(20, 85, 92, 0.10);
   }
-
   .case-number {
     font-family: var(--font-body);
     font-size: 11px;
@@ -184,7 +157,6 @@ background-image:
     letter-spacing: 0.1em;
     font-weight: 600;
   }
-
   .case-title {
     font-family: var(--font-heading);
     font-size: 26px;
@@ -193,7 +165,6 @@ background-image:
     letter-spacing: -0.01em;
     color: var(--ink);
   }
-
   .case-context {
     font-size: 13px;
     color: var(--ink-light);
@@ -201,7 +172,6 @@ background-image:
     letter-spacing: 0.02em;
     font-family: var(--font-body);
   }
-
   .case-summary {
     font-size: 15px;
     line-height: 1.65;
@@ -209,14 +179,12 @@ background-image:
     flex: 1;
     font-family: var(--font-body);
   }
-
   .case-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: auto;
   }
-
   .tag {
     font-family: var(--font-body);
     font-size: 10px;
@@ -229,7 +197,6 @@ background-image:
     font-weight: 500;
     background: transparent;
   }
-
   .case-arrow {
     position: absolute;
     bottom: 44px;
@@ -239,9 +206,7 @@ background-image:
     opacity: 0;
     transition: opacity 0.15s ease;
   }
-
   .case-card:hover .case-arrow { opacity: 1; }
-
   .metrics {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -250,22 +215,19 @@ background-image:
     border: 1px solid var(--rule);
     margin-bottom: 96px;
   }
-
   .metric {
     background: var(--card);
     padding: 36px 32px;
   }
-
   .metric-number {
     font-family: var(--font-heading);
     font-size: 44px;
     font-weight: 700;
-    color: var(--ink);
+    color: var(--primary);
     line-height: 1;
     margin-bottom: 10px;
     letter-spacing: -0.02em;
   }
-
   .metric-label {
     font-size: 11px;
     color: var(--ink-light);
@@ -275,7 +237,6 @@ background-image:
     font-family: var(--font-body);
     font-weight: 500;
   }
-
   .background {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -284,7 +245,6 @@ background-image:
     border-top: 1px solid var(--rule);
     margin-bottom: 96px;
   }
-
   .background-left h2 {
     font-family: var(--font-heading);
     font-size: clamp(32px, 4vw, 52px);
@@ -292,9 +252,8 @@ background-image:
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 24px;
-    color: var(--ink);
+    color: var(--primary);
   }
-
   .background-left p {
     font-size: 15px;
     line-height: 1.75;
@@ -302,20 +261,17 @@ background-image:
     margin-bottom: 16px;
     font-family: var(--font-body);
   }
-
   .background-right {
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding-top: 8px;
   }
-
   .credential {
     display: flex;
     gap: 20px;
     align-items: flex-start;
   }
-
   .credential-icon {
     width: 40px;
     height: 40px;
@@ -327,7 +283,6 @@ background-image:
     flex-shrink: 0;
     border-radius: 2px;
   }
-
   .credential-icon span {
     font-family: var(--font-body);
     font-size: 10px;
@@ -335,7 +290,6 @@ background-image:
     color: var(--accent);
     letter-spacing: 0.05em;
   }
-
   .credential-text strong {
     display: block;
     font-size: 14px;
@@ -344,19 +298,16 @@ background-image:
     font-family: var(--font-body);
     color: var(--ink);
   }
-
   .credential-text span {
     font-size: 13px;
     color: var(--ink-light);
     line-height: 1.5;
     font-family: var(--font-body);
   }
-
   .field-notes {
     border-top: 1px solid var(--rule);
     margin-bottom: 96px;
   }
-
   .field-note {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -364,9 +315,7 @@ background-image:
     padding: 48px 0;
     border-bottom: 1px solid var(--rule);
   }
-
   .field-note-meta { padding-top: 4px; }
-
   .field-note-title {
     font-family: var(--font-heading);
     font-size: 18px;
@@ -376,7 +325,6 @@ background-image:
     margin-bottom: 12px;
     color: var(--ink);
   }
-
   .field-note-date {
     font-family: var(--font-body);
     font-size: 10px;
@@ -385,24 +333,19 @@ background-image:
     color: var(--ink-light);
     font-weight: 500;
   }
-
   .field-note-body p {
     font-size: 15px;
     line-height: 1.75;
     color: var(--ink-light);
     font-family: var(--font-body);
   }
-
   .field-note-body p + p { margin-top: 14px; }
-
   .field-note-body p strong { color: var(--ink); font-weight: 600; }
-
   .field-note-sources {
     margin-top: 28px;
     padding-top: 20px;
     border-top: 1px solid var(--rule);
   }
-
   .field-note-sources-label {
     font-family: var(--font-body);
     font-size: 10px;
@@ -412,21 +355,18 @@ background-image:
     margin-bottom: 8px;
     font-weight: 500;
   }
-
   .field-note-sources p {
     font-size: 13px;
     color: var(--ink-light);
     line-height: 1.6;
     font-family: var(--font-body);
   }
-
   .tag-list {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 24px;
   }
-
   .contact {
     border-top: 1px solid var(--rule);
     padding: 64px 0;
@@ -434,7 +374,6 @@ background-image:
     grid-template-columns: 1fr 1fr;
     gap: 96px;
   }
-
   .contact h2 {
     font-family: var(--font-heading);
     font-size: clamp(36px, 5vw, 60px);
@@ -442,16 +381,14 @@ background-image:
     line-height: 1.1;
     letter-spacing: -0.01em;
     margin-bottom: 16px;
-    color: var(--ink);
+    color: var(--primary);
   }
-
   .contact p {
     font-size: 15px;
     color: var(--ink-light);
     line-height: 1.7;
     font-family: var(--font-body);
   }
-
   .contact-links {
     display: flex;
     flex-direction: column;
@@ -459,7 +396,6 @@ background-image:
     justify-content: center;
     align-items: flex-end;
   }
-
   .contact-links a {
     font-family: var(--font-body);
     font-size: 15px;
@@ -470,14 +406,12 @@ background-image:
     transition: color 0.15s ease, text-decoration-color 0.15s ease;
     font-weight: 400;
   }
-
   .contact-links a:hover {
-    color: var(--accent);
-    text-decoration-color: var(--accent);
+    color: var(--primary);
+    text-decoration-color: var(--primary);
   }
-
   footer {
-    background: var(--ink);
+    background: var(--primary);
     color: var(--paper);
     padding: 24px 48px;
     display: flex;
@@ -488,16 +422,13 @@ background-image:
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-
   footer a {
     color: var(--paper);
     text-decoration: none;
     opacity: 0.65;
     transition: opacity 0.15s ease;
   }
-
   footer a:hover { opacity: 1; }
-
   @media (max-width: 768px) {
     header { padding: 48px 24px 48px; }
     main { padding: 0 24px 64px; }
@@ -513,12 +444,11 @@ background-image:
 </style>
 </head>
 <body>
-
 <header>
   <p class="header-label">Jessica Parker - Portfolio</p>
   <h1>Product management<br>in healthcare<br><em>Clinical. Technical. Product. End to end.</em></h1>
   <div class="header-body">
-    <p>Active RN. Former developer. Senior through Principal-level scope. I see product problems through three lenses at once: clinical, technical, and product. That combination is rare.</p>
+    <p>Active RN. Former developer. Senior through Principal-level scope. I see product problems through three lenses at once: clinical, technical, and product. Each one catches something the other two miss.</p>
     <p>The through line is patient access. I build the systems that stand between patients and the care they need, and fix the ones that are broken.</p>
   </div>
   <div class="header-meta">
@@ -528,8 +458,7 @@ background-image:
     </div>
     <div class="meta-item">
       <span class="meta-label">Background</span>
-      <span class="meta-value">Developer · RN · PM
-</span>
+      <span class="meta-value">Developer · RN · PM</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Domain</span>
@@ -541,96 +470,89 @@ background-image:
     </div>
   </div>
 </header>
-
 <main>
-
   <p class="section-label">Case Studies</p>
-
   <div class="cases">
-
-    <a href="cases/agile.html" class="case-card">
-      <span class="case-number">01</span>
-      <h2 class="case-title">Rebuilding a Broken Agile Process</h2>
-      <p class="case-context">Healthcare Technology Company</p>
-      <p class="case-summary">A cross-functional team had been retrained in agile and was still miserable. Planning sessions ran a full business day. Retros happened quarterly and produced nothing. The problem was not the framework. It was that nobody had listened to why the process was failing.</p>
-      <div class="case-tags">
-        <span class="tag">Agile</span>
-        <span class="tag">Team Health</span>
-        <span class="tag">Process Design</span>
-      </div>
-      <span class="case-arrow"></span>
-    </a>
-
     <a href="cases/launch.html" class="case-card">
-      <span class="case-number">02</span>
-      <h2 class="case-title">Recovering a Failed Product Launch</h2>
-      <p class="case-context">Telehealth / Pharmacy Platform</p>
+      <span class="case-number">01</span>
+      <h2 class="case-title">Rebuilding a Prior Authorization App Around How People Actually Work</h2>
+      <p class="case-context">Consumer Pharmacy Platform</p>
       <p class="case-summary">A prior authorization application launched on schedule and failed immediately. The old manual process was faster. The new system looked right on screen and broke down in practice because it had been built from a spec, not from how people actually worked.</p>
       <div class="case-tags">
-        <span class="tag">Product Recovery</span>
+        <span class="tag">User Research</span>
         <span class="tag">Workflow Mapping</span>
-        <span class="tag">Prior Authorization</span>
+        <span class="tag">Time Studies</span>
       </div>
-      <span class="case-arrow"></span>
+      <span class="case-arrow">→</span>
     </a>
-
+    <a href="cases/opening.html" class="case-card">
+      <span class="case-number">02</span>
+      <h2 class="case-title">What Most Teams Treat as a Checkbox, I Treated as an Opening</h2>
+      <p class="case-context">Clinical EHR Platform</p>
+      <p class="case-summary">Used a forced certification deadline to rebuild the CPOE workflow clinicians hated, keeping the decision with the physician while removing the data-entry bottleneck.</p>
+      <div class="case-tags">
+        <span class="tag">Clinical AI</span>
+        <span class="tag">Human-in-the-Loop Design</span>
+        <span class="tag">EHR</span>
+        <span class="tag">Regulatory Certification</span>
+      </div>
+      <span class="case-arrow">→</span>
+    </a>
     <a href="cases/pharmacovigilance.html" class="case-card">
       <span class="case-number">03</span>
-      <h2 class="case-title">Pharmacovigilance Platform: From Excel to Audit-Ready</h2>
-      <p class="case-context">Specialty Pharmacy Services</p>
+      <h2 class="case-title">Pharmacovigilance Platform: From Excel Workaround to Audit-Ready</h2>
+      <p class="case-context">Consumer Pharmacy Platform</p>
       <p class="case-summary">A specialty pharmacy was tracking adverse events in Excel. Five people touched every report. Five HIPAA incidents per month. The 24-hour FDA reporting SLA was a manual chase. The Excel spreadsheet was not the problem. It was the symptom.</p>
       <div class="case-tags">
         <span class="tag">HIPAA Compliance</span>
         <span class="tag">0-to-1 Build</span>
         <span class="tag">Process Design</span>
       </div>
-      <span class="case-arrow"></span>
+      <span class="case-arrow">→</span>
     </a>
-
-    <a href="cases/chaos.html" class="case-card">
+    <a href="cases/call.html" class="case-card">
       <span class="case-number">04</span>
-      <h2 class="case-title">Protecting Delivery from Organizational Chaos</h2>
-      <p class="case-context">Telehealth / Pharmacy Platform</p>
-      <p class="case-summary">Leadership arrived weekly with new initiatives that needed to fit into an existing roadmap. The team was constantly being asked to absorb work without anything being removed. The problem was not the requests. It was that no one had a framework for evaluating trade-offs.</p>
-      <div class="case-tags">
-        <span class="tag">Roadmap Management</span>
-        <span class="tag">Stakeholder Alignment</span>
-        <span class="tag">Delivery</span>
-      </div>
-      <span class="case-arrow"></span>
-    </a>
-
-  <a href="cases/call.html" class="case-card">
-      <span class="case-number">05</span>
-      <h2 class="case-title">After the Call, the Patient Went Blind</h2>
-      <p class="case-context">Healthcare Technology Company</p>
+      <h2 class="case-title">Giving Patients Visibility Into Their Own Resolution</h2>
+      <p class="case-context">Direct-to-Patient Digital Pharmacy</p>
       <p class="case-summary">Built the status visibility a direct-to-patient pharmacy was missing, so patients holding the wrong medication could see the fix coming instead of calling to chase it.</p>
       <div class="case-tags">
         <span class="tag">Digital Health</span>
         <span class="tag">Patient Flow</span>
         <span class="tag">B2B2C</span>
       </div>
-      <span class="case-arrow"></span>
-    </a> 
-
-   <a href="cases/opening.html" class="case-card">
-      <span class="case-number">06</span>
-      <h2 class="case-title">What Most Teams Treat as a Checkbox, I Treated as an Opening</h2>
-      <p class="case-context">Healthcare Technology Company</p>
-      <p class="case-summary">Used a forced certification deadline to rebuild the CPOE workflow clinicians hated, keeping the decision with the physician while removing the data-entry bottleneck.</p>
+      <span class="case-arrow">→</span>
+    </a>
+    <a href="cases/chaos.html" class="case-card">
+      <span class="case-number">05</span>
+      <h2 class="case-title">Protecting Delivery Through Constant Scope Change</h2>
+      <p class="case-context">Direct-to-Patient Digital Pharmacy</p>
+      <p class="case-summary">Leadership arrived weekly with new initiatives that needed to fit into an existing roadmap. The team was constantly being asked to absorb work without anything being removed. The problem was not the requests. It was that no one had a framework for evaluating trade-offs.</p>
       <div class="case-tags">
-        <span class="tag">Clinical AI</span>
-        <span class="tag">EHR</span>
-        <span class="tag">Regulatory</span>
+        <span class="tag">Stakeholder Management</span>
+        <span class="tag">Trade-off Frameworks</span>
+        <span class="tag">Roadmap Planning</span>
       </div>
-      <span class="case-arrow"></span>
-    </a> 
-   
+      <span class="case-arrow">→</span>
+    </a>
+    <a href="cases/agile.html" class="case-card">
+      <span class="case-number">06</span>
+      <h2 class="case-title">Rebuilding Agile Delivery Into a High-Performing Engine</h2>
+      <p class="case-context">Healthcare Technology Company</p>
+      <p class="case-summary">A cross-functional team had been retrained in agile and was still miserable. Planning sessions ran a full business day. Retros happened quarterly and produced nothing. The problem was not the framework. It was that nobody had listened to why the process was failing.</p>
+      <div class="case-tags">
+        <span class="tag">Jira</span>
+        <span class="tag">Agile Coaching</span>
+        <span class="tag">Process Design</span>
+      </div>
+      <span class="case-arrow">→</span>
+    </a>
   </div>
-
   <p class="section-label">Selected Results</p>
-
   <div class="metrics">
+    <div class="metric">
+      <div class="metric-number">$3.75M</div>
+      <div class="metric-label">Annual recurring savings from replacing legacy vendor platforms</div>
+    </div>
     <div class="metric">
       <div class="metric-number">0</div>
       <div class="metric-label">HIPAA incidents per month, down from 5</div>
@@ -643,17 +565,11 @@ background-image:
       <div class="metric-number">98%</div>
       <div class="metric-label">On-time delivery rate after agile rebuild</div>
     </div>
-    <div class="metric">
-      <div class="metric-number">6h→1h</div>
-      <div class="metric-label">Planning session time after process redesign</div>
-    </div>
   </div>
-
   <div class="background">
     <div class="background-left">
       <h2>Three lenses.<br>One problem.</h2>
-      <p>Most product managers see healthcare from one angle. I have been the clinician at the point of care using the tool, the developer who built it, and the PM who decided whether it shipped.
-</p>
+      <p>I have been the clinician at the point of care using the tool, the developer who built it, and the PM who decided whether it shipped. Each seat shows you something the other two cannot.</p>
       <p>That means I catch what breaks in practice before it breaks in production. The alert that fires too often. The workflow that assumes time the clinician does not have. The spec that looks complete and misses how people actually work.</p>
       <p>I specialize in the systems that stand between patients and the care or resources they need: enrollment flows, prior authorization platforms, onboarding experiences, provider-facing tools, and the internal workflows that have to function for any of it to work.</p>
     </div>
@@ -688,12 +604,9 @@ background-image:
       </div>
     </div>
   </div>
-
   <div class="field-notes" id="field-notes">
     <p class="section-label">Field Notes</p>
-
     <div class="cases">
-
       <a href="notes/shadow-ai.html" class="case-card">
         <span class="case-number">June 2026</span>
         <h2 class="case-title">Shadow AI</h2>
@@ -703,10 +616,9 @@ background-image:
           <span class="tag">Workflow Design</span>
           <span class="tag">Adoption</span>
         </div>
-        <span class="case-arrow"></span>
+        <span class="case-arrow">→</span>
       </a>
-
-     <a href="notes/problem.html" class="case-card">
+      <a href="notes/problem.html" class="case-card">
         <span class="case-number">July 2026</span>
         <h2 class="case-title">They Never Tell You the Problem. They Tell You the Solution.</h2>
         <p class="case-summary">Every requirement is a solution someone already chose. The job is reversing it back into the problem they skipped past.</p>
@@ -715,10 +627,9 @@ background-image:
           <span class="tag">Stakeholder Management</span>
           <span class="tag">Requirements</span>
         </div>
-        <span class="case-arrow"></span>
+        <span class="case-arrow">→</span>
       </a>
-
-     <a href="notes/seventy-percent.html" class="case-card">
+      <a href="notes/seventy-percent.html" class="case-card">
         <span class="case-number">July 2026</span>
         <h2 class="case-title">The Other 70%</h2>
         <p class="case-summary">Technology is 30% of a healthcare AI rollout. Adoption is the other 70%. Most systems already bought the 30%. The part that decides whether the tool helps a clinician or logs a login is still open, and it is the best work in health tech.</p>
@@ -730,81 +641,73 @@ background-image:
         <span class="case-arrow">→</span>
       </a>
     </div>
-
   </div>
-<div style="border-top: 1px solid var(--rule); padding-top: 64px; margin-bottom: 96px;">
-  <p class="section-label">AI Product Work</p>
-
-<p style="font-size: 15px; line-height: 1.75; color: var(--ink-light); max-width: 640px; margin-bottom: 48px; font-family: var(--font-body);">Production AI tools, each scoped and shipped as a product. Each includes a decision log: what the problem was, what I considered, what I built, and why. Published because the thinking is the work.</p>
-  <div class="cases">
-
-    <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/squirrel's-desk-daily-planning-agent" class="case-card" target="_blank">
-      <span class="case-number">01</span>
-      <h2 class="case-title">Daily Planning Agent</h2>
-      <p class="case-context">Personal Practice Operations</p>
-      <p class="case-summary">Reads from Obsidian, Google Calendar, and Todoist. Takes two inputs — energy level and available hours — and generates a scoped HTML briefing for the day. Replaces a manual planning process with a structured, repeatable output built around how I actually work.</p>
-      <div class="case-tags">
-        <span class="tag">Multi-source Synthesis</span>
-        <span class="tag">Context Engineering</span>
-        <span class="tag">Agentic Workflow</span>
-      </div>
-      <span class="case-arrow">→</span>
-    </a>
-
-    <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/jd-triage" class="case-card" target="_blank">
-      <span class="case-number">02</span>
-      <h2 class="case-title">Job Description Evaluator</h2>
-      <p class="case-context">Job Search Tooling</p>
-      <p class="case-summary">Evaluates job postings against a defined set of fit criteria. Scores each posting, logs results to Notion automatically, and tracks outcomes over time. Built to replace subjective review with a structured, repeatable evaluation process with a memory.</p>
-      <div class="case-tags">
-        <span class="tag">Scoring Engine</span>
-        <span class="tag">Notion Integration</span>
-        <span class="tag">Outcome Tracking</span>
-      </div>
-      <span class="case-arrow">→</span>
-    </a>
-
-    <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/parker-pm-outreach-agent" class="case-card" target="_blank">
-      <span class="case-number">03</span>
-      <h2 class="case-title">Outreach Research Agent</h2>
-      <p class="case-context">Fractional Practice Development</p>
-      <p class="case-summary">Takes a company as input. Runs targeted research, scores fit against a defined client profile, and drafts personalized outreach. Each step is structured with conditional logic based on fit score — companies below threshold get flagged, not drafted.</p>
-      <div class="case-tags">
-        <span class="tag">Research Agent</span>
-        <span class="tag">Conditional Logic</span>
-        <span class="tag">Outreach Generation</span>
-      </div>
-      <span class="case-arrow">→</span>
-    </a>
-<a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/daily-debrief-agent" class="case-card" target="_blank">
-      <span class="case-number">04</span>
-      <h2 class="case-title">Daily Debrief Agent</h2>
-      <p class="case-context">Personal Practice Operations</p>
-      <p class="case-summary">An end-of-day capture system that scans the session, Slack, and Todoist before asking anything. Routes ideas to the right bucket, writes a structured debrief to Obsidian, and generates a visual summary in Whimsical. A merge agent handles days where work happened across multiple sessions.</p>
-      <div class="case-tags">
-        <span class="tag">Multi-source Synthesis</span>
-        <span class="tag">Agentic Workflow</span>
-        <span class="tag">Context Engineering</span>
-      </div>
-      <span class="case-arrow">→</span>
-    </a>
-
-    <a href="https://claude.ai/public/artifacts/f4637fa1-86b8-499b-a683-68ba5047c889" class="case-card" target="_blank">
-      <span class="case-number">05</span>
-      <h2 class="case-title">Walking Pad Workout Tool</h2>
-      <p class="case-context">Personal Practice Operations</p>
-      <p class="case-summary">A single-file, timer-driven workout tracker for a treadmill desk. Automated phase transitions and equipment swap options. Built to eliminate pre-session decisions so the routine runs without active management.</p>
-      <div class="case-tags">
-        <span class="tag">HTML/CSS/JS</span>
-        <span class="tag">Single File</span>
-        <span class="tag">Workflow Design</span>
-      </div>
-      <span class="case-arrow">→</span>
-    </a>
-   
-
+  <div style="border-top: 1px solid var(--rule); padding-top: 64px; margin-bottom: 96px;">
+    <p class="section-label">AI Product Work</p>
+    <p style="font-size: 15px; line-height: 1.75; color: var(--ink-light); max-width: 640px; margin-bottom: 48px; font-family: var(--font-body);">Production AI tools, each scoped and shipped as a product. Each includes a decision log: what the problem was, what I considered, what I built, and why. Published because the thinking is the work.</p>
+    <div class="cases">
+      <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/squirrel's-desk-daily-planning-agent" class="case-card" target="_blank">
+        <span class="case-number">01</span>
+        <h2 class="case-title">Daily Planning Agent</h2>
+        <p class="case-context">Personal Practice Operations</p>
+        <p class="case-summary">Reads from Obsidian, Google Calendar, and Todoist. Takes two inputs — energy level and available hours — and generates a scoped HTML briefing for the day. Replaces a manual planning process with a structured, repeatable output built around how I actually work.</p>
+        <div class="case-tags">
+          <span class="tag">Multi-source Synthesis</span>
+          <span class="tag">Context Engineering</span>
+          <span class="tag">Agentic Workflow</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+      <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/jd-triage" class="case-card" target="_blank">
+        <span class="case-number">02</span>
+        <h2 class="case-title">Job Description Evaluator</h2>
+        <p class="case-context">Job Search Tooling</p>
+        <p class="case-summary">Evaluates job postings against a defined set of fit criteria. Scores each posting, logs results to Notion automatically, and tracks outcomes over time. Built to replace subjective review with a structured, repeatable evaluation process with a memory.</p>
+        <div class="case-tags">
+          <span class="tag">Scoring Engine</span>
+          <span class="tag">Notion Integration</span>
+          <span class="tag">Outcome Tracking</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+      <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/parker-pm-outreach-agent" class="case-card" target="_blank">
+        <span class="case-number">03</span>
+        <h2 class="case-title">Outreach Research Agent</h2>
+        <p class="case-context">Fractional Practice Development</p>
+        <p class="case-summary">Takes a company as input. Runs targeted research, scores fit against a defined client profile, and drafts personalized outreach. Each step is structured with conditional logic based on fit score — companies below threshold get flagged, not drafted.</p>
+        <div class="case-tags">
+          <span class="tag">Research Agent</span>
+          <span class="tag">Conditional Logic</span>
+          <span class="tag">Outreach Generation</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+      <a href="https://github.com/jparkerpm-cmyk/jessica-parker-ai-pm/tree/main/daily-debrief-agent" class="case-card" target="_blank">
+        <span class="case-number">04</span>
+        <h2 class="case-title">Daily Debrief Agent</h2>
+        <p class="case-context">Personal Practice Operations</p>
+        <p class="case-summary">An end-of-day capture system that scans the session, Slack, and Todoist before asking anything. Routes ideas to the right bucket, writes a structured debrief to Obsidian, and generates a visual summary in Whimsical. A merge agent handles days where work happened across multiple sessions.</p>
+        <div class="case-tags">
+          <span class="tag">Multi-source Synthesis</span>
+          <span class="tag">Agentic Workflow</span>
+          <span class="tag">Context Engineering</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+      <a href="https://claude.ai/public/artifacts/f4637fa1-86b8-499b-a683-68ba5047c889" class="case-card" target="_blank">
+        <span class="case-number">05</span>
+        <h2 class="case-title">Walking Pad Workout Tool</h2>
+        <p class="case-context">Personal Practice Operations</p>
+        <p class="case-summary">A single-file, timer-driven workout tracker for a treadmill desk. Automated phase transitions and equipment swap options. Built to eliminate pre-session decisions so the routine runs without active management.</p>
+        <div class="case-tags">
+          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">Single File</span>
+          <span class="tag">Workflow Design</span>
+        </div>
+        <span class="case-arrow">→</span>
+      </a>
+    </div>
   </div>
-</div>
   <div class="contact">
     <div>
       <h2>Let's talk.</h2>
@@ -816,13 +719,10 @@ background-image:
       <a href="https://github.com/jparkerpm-cmyk/jessica-parker-portfolio" class="contact-link" target="_blank">GitHub</a>
     </div>
   </div>
-
 </main>
-
 <footer>
   <span>Jessica Parker · Healthcare Product Management</span>
   <span>Connecticut · Remote</span>
 </footer>
-
 </body>
 </html>
