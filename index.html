@@ -10,18 +10,28 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'DM Mono', monospace;
-    --ink: hsl(20, 28%, 13%);
-    --ink-light: hsl(25, 18%, 38%);
-    --paper: hsl(36, 55%, 96%);
-    --card: hsl(38, 50%, 94%);
-    --rule: hsl(30, 28%, 80%);
-    --accent: hsl(16, 88%, 52%);
-    --accent-light: hsl(34, 42%, 91%);
-    --white: hsl(38, 60%, 98%);
-  }
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --paper: #FDFBF8;
+  --card: #F7F3ED;
+  --white: #FFFFFF;
+
+  --ink: #3D3D3B;
+  --ink-light: #5A6B6D;
+  --primary: #14555C;
+
+  --rule: #E2DFD9;
+  --accent: #8B6914;
+  --accent-fill: #D9A34A;
+  --accent-light: #F5EBD8;
+  --accent-foreground: #3D2A08;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+}
 
   html { font-size: 16px; scroll-behavior: smooth; }
 
